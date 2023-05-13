@@ -1,0 +1,97 @@
+body {
+    background-color: lightcoral;
+}
+
+.container {
+    display: flex;
+    gap: 500px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    position: relative;
+    border-radius: 50%;
+    /* animation-fill-mode: forwards; */
+    animation: changeColor 3s infinite linear;
+}
+
+.box2 {
+    animation: none;
+    width: 50%;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: lightblue;
+    border: 3px solid black;
+}
+
+.box2 h1 {
+    animation: move 5s infinite;
+}
+
+@keyframes changeColor {
+    0% {
+        top: 0;
+        left: 0;
+        background-color: blue;
+    }
+
+    25% {
+        top: 0;
+        left: 400px;
+        background-color: green;
+    }
+
+    50% {
+        top: 300px;
+        left: 400px;
+        background-color: yellow;
+    }
+
+    75% {
+        top: 300px;
+        left: 0px;
+        background-color: purple;
+    }
+
+    100% {
+        top: 0;
+        left: 00px;
+        background-color: red;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+.box3 {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+    left: 0;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+.box3:hover {
+    left: 200px;
+    transition: 3s;
+    color: blue;
+}
